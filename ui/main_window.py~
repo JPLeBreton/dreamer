@@ -1,0 +1,14 @@
+from PySide import QtGui
+from PySide import QtCore
+from PySide import QtUiTools
+
+ui_file_name = 'main_window.ui'
+class LayerWidget(QtGui.QMainWindow):
+    def __init__(self, *args):
+        apply(QtGui.QMainWindow.__init__, (self,) + args)
+        loader = QtUiTools.QUiLoader()
+        ui_file = QtCore.QFile(ui_file_name)
+        ui_file.open(QtCore.QFile.ReadOnly)
+        self.myWidget = loader.load(ui_file, self)
+        ui_file.close()
+        self.setCentralWidget(self.myWidget)
