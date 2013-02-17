@@ -1,4 +1,3 @@
-
 # ongoing design log
 
 ## layers (document structure)
@@ -27,10 +26,10 @@ layers can have an image reference, ie an <img> element, but also painted raster
  * page background image
  * page audio ambience
  * ordered list of page layer instances (by name)
-    - layer instance position
-    - layer instance  size
-    - layer instance link (script or target)
-    - layer instance comment (not seen by player, used as img alt text)
+     - layer instance position
+     - layer instance  size
+     - layer instance link (script or target)
+     - layer instance comment (not seen by player, used as img alt text)
 * layer:
  * layer name
  * layer text (can be blank)
