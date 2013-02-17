@@ -4,12 +4,15 @@
 ## layers (document structure)
 
 a single layer can appear on multiple pages in multiple locations with multiple sizes.
+
 (what's the same across pages, then?  text/image resources, link/script?  possible some concept like Unity's prefab vs instance is needed, though without inheritance)
 
 layers are a user-facing concept, under the hood (ie on export) each usage of a layer on a given page becomes its own unique div id.
 
 in a layer's properties you can see which pages it appears on
+
 in a page's properties you can see which layers it features
+
 under the hood, pages keep lists of layers; export process walks this list to build DOM so layers that aren't used on any page are in the .dr file but not the exported story.
 
 layers can have an image reference, ie an <img> element, but also painted raster data(?)  (if both, how are these integrated?  <img> vs CSS background?)
