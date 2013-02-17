@@ -3,6 +3,7 @@ from PySide import QtCore
 from PySide import QtUiTools
 
 from ui import UI_RESOURCE_PATH
+from layer_widget import LayerWidget
 
 ui_file_name = 'main_window.ui'
 class MainWindow(QtGui.QMainWindow):
@@ -14,3 +15,6 @@ class MainWindow(QtGui.QMainWindow):
         self.myWindow = loader.load(ui_file)
         ui_file.close()
         self.setCentralWidget(self.myWindow)
+        
+        self._layer_widget = LayerWidget(self)
+        self.myWindow.layer_dock.setWidget(self._layer_widget.myWidget)

@@ -1,5 +1,6 @@
 import sys
 from PySide.QtGui import QApplication
+
 from ui.main_window import MainWindow
 
 APP_NAME = 'Dreamer'
