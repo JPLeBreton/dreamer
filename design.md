@@ -1,10 +1,7 @@
 
-ongoing design log
-==================
+# ongoing design log
 
-
-layers (document structure)
-------
+## layers (document structure)
 
 a single layer can appear on multiple pages in multiple locations with multiple sizes.
 (what's the same across pages, then?  text/image resources, link/script?  possible some concept like Unity's prefab vs instance is needed, though without inheritance)
@@ -18,23 +15,22 @@ under the hood, pages keep lists of layers; export process walks this list to bu
 layers can have an image reference, ie an <img> element, but also painted raster data(?)  (if both, how are these integrated?  <img> vs CSS background?)
 
 
-.dr document structure
-----------------------
+## .dr document structure
 
 * story name
 * unordered list of pages
 * unordered list of layers
 * page:
-  * page name
-  * page script
-  * page background color
-  * page background image
-  * page audio ambience
-  * ordered list of page layer instances (by name)
-	* layer instance position
-	* layer instance  size
-	* layer instance link (script or target)
-	* layer instance comment (not seen by player, used as img alt text)
+ * page name
+ * page script
+ * page background color
+ * page background image
+ * page audio ambience
+ * ordered list of page layer instances (by name)
+    - layer instance position
+    - layer instance  size
+    - layer instance link (script or target)
+    - layer instance comment (not seen by player, used as img alt text)
 * layer:
  * layer name
  * layer text (can be blank)
@@ -46,8 +42,7 @@ layers can have an image reference, ie an <img> element, but also painted raster
  * layer link (script or target)
 
 
-export process
---------------
+## export process
 
 command line program for converting native format .dr files into html, GUI app invokes the same code.
 
@@ -73,7 +68,6 @@ an exported story looks like:
 "offline" export option fetches all remotely linked resources and caches them remotely, including jquery.  increases file size but you can play without a net connection.
 
 
-dynamic layer text
-------------------
+## dynamic layer text
 
 need some sort of special character/pattern to designate a substring in a layer's text as referencing a user-defined variable, eg $NumberOfFruits, $PlayerName, whatever.  this should be recalculated as needed (maybe page script runs an "update page" function when anything happens, checks if any variables have changed and updates element content)
