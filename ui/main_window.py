@@ -2,19 +2,19 @@ from PySide import QtGui
 from PySide import QtCore
 from PySide import QtUiTools
 
-from ui import UI_RESOURCE_PATH
+from pyside_dynamic import loadUi
+import ui
 from layer_widget import LayerWidget
 
 ui_file_name = 'main_window.ui'
 class MainWindow(QtGui.QMainWindow):
     def __init__(self, *args):
-        apply(QtGui.QMainWindow.__init__, (self,) + args)
-        loader = QtUiTools.QUiLoader()
-        ui_file = QtCore.QFile(UI_RESOURCE_PATH + ui_file_name)
-        ui_file.open(QtCore.QFile.ReadOnly)
-        self.myWindow = loader.load(ui_file)
-        ui_file.close()
-        self.setCentralWidget(self.myWindow)
+        QtGui.QMainWindow.__init__(self)
+        loadUi(ui.UI_RESOURCE_PATH + ui_file_name, self)
         
         self._layer_widget = LayerWidget(self)
-        self.myWindow.layer_dock.setWidget(self._layer_widget.myWidget)
+        self.layer_dock.setWidget(self._layer_widget)
+    
+    @QtCore.Slot()
+    def _on_action_new_layer(self):
+        self._layer_widget.new_layer()

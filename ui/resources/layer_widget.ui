@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>doot</string>
+    <string>Add Layer</string>
    </property>
   </widget>
   <widget class="QListView" name="listView">
@@ -34,6 +34,19 @@
      <width>241</width>
      <height>231</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>250</y>
+     <width>98</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete Layer</string>
    </property>
   </widget>
  </widget>

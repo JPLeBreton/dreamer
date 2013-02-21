@@ -17,14 +17,14 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>250</x>
       <y>100</y>
       <width>111</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>POOPS</string>
+     <string>POOPS.</string>
     </property>
    </widget>
   </widget>
@@ -41,52 +41,52 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionNew"/>
-    <addaction name="actionOpen"/>
-    <addaction name="actionSave"/>
-    <addaction name="actionExit"/>
+    <addaction name="action_new"/>
+    <addaction name="action_open"/>
+    <addaction name="action_save"/>
+    <addaction name="action_exit"/>
    </widget>
    <widget class="QMenu" name="menuLayer">
     <property name="title">
      <string>Layer</string>
     </property>
-    <addaction name="actionNew_Layer"/>
-    <addaction name="actionDelete_Layer"/>
+    <addaction name="action_new_layer"/>
+    <addaction name="action_delete_layer"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
      <string>Edit</string>
     </property>
-    <addaction name="actionUndo"/>
-    <addaction name="actionRedo"/>
+    <addaction name="action_undo"/>
+    <addaction name="action_redo"/>
     <addaction name="separator"/>
-    <addaction name="actionCut"/>
-    <addaction name="actionCopy"/>
-    <addaction name="actionPaste"/>
+    <addaction name="action_cut"/>
+    <addaction name="action_copy"/>
+    <addaction name="action_paste"/>
     <addaction name="separator"/>
-    <addaction name="actionSelect_All"/>
-    <addaction name="actionSelect_None"/>
+    <addaction name="action_select_all"/>
+    <addaction name="action_select_none"/>
    </widget>
    <widget class="QMenu" name="menuPage">
     <property name="title">
      <string>Page</string>
     </property>
-    <addaction name="actionNew_Page"/>
-    <addaction name="actionDelete_Page"/>
+    <addaction name="action_new_page"/>
+    <addaction name="action_delete_page"/>
    </widget>
    <widget class="QMenu" name="menuExport">
     <property name="title">
      <string>Export</string>
     </property>
-    <addaction name="actionExport_Story"/>
-    <addaction name="actionExport_Story_Options"/>
+    <addaction name="action_export"/>
+    <addaction name="action_export_options"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
      <string>Help</string>
     </property>
-    <addaction name="actionOnline_Help"/>
-    <addaction name="actionAbout"/>
+    <addaction name="action_help"/>
+    <addaction name="action_about"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -102,102 +102,142 @@
    </attribute>
    <widget class="QWidget" name="dockWidgetContents"/>
   </widget>
-  <action name="actionNew">
+  <widget class="QToolBar" name="tool_bar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_new"/>
+   <addaction name="action_open"/>
+   <addaction name="action_save"/>
+   <addaction name="separator"/>
+   <addaction name="action_undo"/>
+   <addaction name="action_redo"/>
+   <addaction name="separator"/>
+   <addaction name="action_new_layer"/>
+   <addaction name="action_delete_layer"/>
+  </widget>
+  <action name="action_new">
    <property name="text">
     <string>New</string>
    </property>
   </action>
-  <action name="actionOpen">
+  <action name="action_open">
    <property name="text">
     <string>Open</string>
    </property>
   </action>
-  <action name="actionSave">
+  <action name="action_save">
    <property name="text">
     <string>Save</string>
    </property>
   </action>
-  <action name="actionExit">
+  <action name="action_exit">
    <property name="text">
     <string>Exit</string>
    </property>
   </action>
-  <action name="actionNew_Layer">
+  <action name="action_new_layer">
    <property name="text">
     <string>New Layer</string>
    </property>
   </action>
-  <action name="actionDelete_Layer">
+  <action name="action_delete_layer">
    <property name="text">
     <string>Delete Layer</string>
    </property>
   </action>
-  <action name="actionUndo">
+  <action name="action_undo">
    <property name="text">
     <string>Undo</string>
    </property>
   </action>
-  <action name="actionRedo">
+  <action name="action_redo">
    <property name="text">
     <string>Redo</string>
    </property>
   </action>
-  <action name="actionCut">
+  <action name="action_cut">
    <property name="text">
     <string>Cut</string>
    </property>
   </action>
-  <action name="actionCopy">
+  <action name="action_copy">
    <property name="text">
     <string>Copy</string>
    </property>
   </action>
-  <action name="actionPaste">
+  <action name="action_paste">
    <property name="text">
     <string>Paste</string>
    </property>
   </action>
-  <action name="actionSelect_All">
+  <action name="action_select_all">
    <property name="text">
     <string>Select All</string>
    </property>
   </action>
-  <action name="actionSelect_None">
+  <action name="action_select_none">
    <property name="text">
     <string>Select None</string>
    </property>
   </action>
-  <action name="actionNew_Page">
+  <action name="action_new_page">
    <property name="text">
     <string>New Page</string>
    </property>
   </action>
-  <action name="actionDelete_Page">
+  <action name="action_delete_page">
    <property name="text">
     <string>Delete Page</string>
    </property>
   </action>
-  <action name="actionExport_Story">
+  <action name="action_export">
    <property name="text">
     <string>Export to Web</string>
    </property>
   </action>
-  <action name="actionExport_Story_Options">
+  <action name="action_export_options">
    <property name="text">
     <string>Export Options...</string>
    </property>
   </action>
-  <action name="actionAbout">
+  <action name="action_about">
    <property name="text">
     <string>About</string>
    </property>
   </action>
-  <action name="actionOnline_Help">
+  <action name="action_help">
    <property name="text">
     <string>Online Help...</string>
    </property>
   </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>action_new_layer</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>_on_action_new_layer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>_on_action_new_layer()</slot>
+ </slots>
 </ui>
