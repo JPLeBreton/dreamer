@@ -5,7 +5,7 @@ a tool for creating visual hypertext stories
 
 # current state of the project
 
-I (JP) won't have time to work on this project for a while, probably the rest of 2013, so I'm writing up as much of the design in my head as possible so that other people can continue the work.
+I (JP) won't have time to work on this project for a while, probably the rest of 2013, so I'm writing up as much of the design in my head as possible so that other people can continue the work.  Please post any questions to the [the wiki](https://github.com/JPLeBreton/dreamer/wiki), I'm happy to answer and consult with anyone who is interested in helping.
 
 Most of the material here is about user interface - my approach has been to design from the UI inward (towards the implementation), because accessibility is the highest single priority for a tool aimed at people who've never made games before.
 
